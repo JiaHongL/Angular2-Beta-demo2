@@ -1,0 +1,9 @@
+<div id="openModal" class="modalDialog" [ngClass]="{'active':Is_Open.status}">
+    <div>
+      <a title="Close" class="close" (click)="Is_Open.status=false">X</a>
+      <span class="modalDialog_store_name"><h1>{{Modal_Content.Name}}</h1></span>
+      <span class="modalDialog_text"><p>主人的話：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{Modal_Content.HostWords||'暫無資訊'}}</p></span>
+      <span class="modalDialog_text modalDialog_FoodFeature"><p>美食特色：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{Modal_Content.FoodFeature||'暫無資訊'}}</p></span>
+      <span class="modalDialog_text"><p>店家部落格：<a href="{{Modal_Content.BlogUrl}}" target="_blank">{{Modal_Content.BlogUrl||'暫無資訊'}}</a></p></span>
+    </div>
+</div>

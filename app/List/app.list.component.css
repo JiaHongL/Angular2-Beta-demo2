@@ -1,0 +1,82 @@
+/*
+I.CSS書寫順序
+  1.位置屬性(position, top, right, z-index, display, float等)
+  2.大小(width, height, padding, margin)
+  3.文字系列(font, line-height, letter-spacing, color- text-align等)
+  4.背景(background, border等)
+  5.其他(animation, transition等)
+II.BEM （Block）（Element）（Modifier）：
+  .block{}
+  .block__element{}
+  .block--modifier{}
+*/
+
+.wrapper {
+  /*display:flex;
+  align-items: center;
+  justify-content: center;*/
+  width:100%;
+  min-height: 100%;
+}
+.list{
+  display:inline-block;
+  vertical-align:top;
+  width:32%;
+  margin:0.5%;
+  height:360px;
+  padding:20px;
+  background-color: white;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  animation:show 1s linear;
+}
+@media screen and (max-width: 768px) {
+  .list{
+    display:inline-block;
+    width:96%;
+    margin:2%;
+    height:350px;
+    box-sizing: border-box;
+  }
+}
+
+.list_store_name{
+  text-align:center;
+  text-shadow:3px 3px 3px #cccccc;
+}
+.list_store_name h1{
+  margin-top:0px;
+}
+
+.list_text{
+  margin:0px;
+  line-height: 24px;　　　          　/* 設定文字行距 */
+  /*letter-spacing: 3px;*/
+  text-shadow:3px 3px 3px #cccccc;
+}
+
+
+.list:hover{
+  transform:translateY(-5px);
+  box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+@keyframes show {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+.no_data{
+  color:black;
+  padding-top:50px;
+  text-align: center;
+}
+
+.point:hover{
+  color: red;
+}

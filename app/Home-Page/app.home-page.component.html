@@ -1,0 +1,13 @@
+<div class="HomePage">
+  <div class="Search">
+    <div class="Search_Content">
+      <my-search (Onclick_Search)="Search($event)" class="my-search"></my-search>
+    </div>
+  </div>
+  <div class="List">
+    <div class="List_Content">
+      <my-list class="my-list" [pass_data]="list_data"></my-list>
+    </div>
+  </div>
+  <a class="scrollup" (click)="Gotop()">Scroll</a>
+</div>

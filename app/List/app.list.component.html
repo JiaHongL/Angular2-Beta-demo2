@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <div class="no_data" [hidden]="pass_data!=''">
+    <img src="images/sad.png">
+    <h1>查無資訊</h1>
+  </div>
+  <div class="list" *ngFor="let list of pass_data  , let i=index " (click)="Open(list)">
+    <span class="list_store_name"><h1>{{list.Name}}</h1></span>
+    <span class="list_text"><p>電話：{{list.Tel||'暫無資訊'}}</p></span>
+    <span class="list_text"><p>地址：{{list.Address||'暫無資訊'}}<span class="point" (click)="Open2(list)">(<i class="fa fa-car" aria-hidden="true"></i>)</span></p></span>
+    <span class="list_text"><p>停車場：{{list.ParkingLot||'暫無資訊'}}</p></span>
+    <span class="list_text">
+      <p>價位：{{list.Price | slice:0:80 ||'暫無資訊'}}<span [hidden]="list['Price'].length<'80'">...</span></p>
+    </span>
+    <!-- <span class="list_text"><p>道路指引：<br>{{list.TrafficGuidelines||'暫無資訊'}}</p></span> -->
+  </div>
+<div>
+<my-big-modal [Modal_Content]="Modal_Data" [Is_Open]="Open_modal"></my-big-modal>
+<my-point-modal [Modal_Content2]="Modal_Data2" [Is_Open2]="Open_modal2"></my-point-modal>

@@ -1,0 +1,7 @@
+<div id="openModal" class="modalDialog" [ngClass]="{'active':Is_Open2.status}">
+    <div>
+      <a title="Close" class="close" (click)="Is_Open2.status=false">X</a>
+      <span class="modalDialog_store_name"><h1>道路指南 - {{Modal_Content2.Name}}</h1></span>
+      <span class="modalDialog_text">{{Modal_Content2.TrafficGuidelines||'暫無資訊'}}</span>
+    </div>
+</div>

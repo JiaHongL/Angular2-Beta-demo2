@@ -1,0 +1,138 @@
+/*
+I.CSS書寫順序
+  1.位置屬性(position, top, right, z-index, display, float等)
+  2.大小(width, height, padding, margin)
+  3.文字系列(font, line-height, letter-spacing, color- text-align等)
+  4.背景(background, border等)
+  5.其他(animation, transition等)
+II.BEM （Block）（Element）（Modifier）：
+  .block{}
+  .block__element{}
+  .block--modifier{}
+*/
+body{
+    font-family: Courier;
+    min-height: 100%;
+}
+
+.Index{
+  width:100%;
+  min-height: 100%;
+}
+
+.Index header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:1;
+  width: 100%;
+  height: 80px;
+  background-color:white;
+  box-shadow:0px 1px 3px rgba(20%,20%,40%,0.5);
+}
+
+.Index .main{
+  width:100%;
+  min-height: 100%;
+  margin-top: 81px;
+  background-color:#eeeeee;
+}
+
+.Index footer{
+  width: 100%;
+  height: 180px;
+  padding:60 60 30 60;
+  background-color:#004d40;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .Index footer{
+    padding:10 10 10 10;
+  }
+  .footer_data{
+    text-align:left;
+  }
+  .footer_icon{
+    text-align:left;
+  }
+  .footer_copyright{
+    text-align:left;
+  }
+}
+
+.footer_data{
+  padding:5px;
+  text-align:center;
+  color: white;
+}
+.footer_icon{
+  padding:5px;
+  text-align:center;
+  color: white;
+}
+.footer_icon a{
+  color: white;
+}
+.footer_copyright{
+  padding:5px;
+  text-align:center;
+  color: white;
+}
+
+.logo{
+  display: inline-block;
+  width:320px;
+  height: 80px;
+  padding-left:15px;
+}
+@media screen and (max-width: 768px) {
+  .logo{
+    display: inline-block;
+    width:300px;
+    height: 80px;
+    padding-left: 0px;
+  }
+}
+
+.logo_img{
+  width:60px;
+  height:60px;
+  padding:10px;
+  transform:rotate(6deg);
+  animation:rotate 1s linear;
+}
+@media screen and (max-width: 768px) {
+  .logo_img{
+    width:50px;
+    height:50px;
+    padding:15px;
+  }
+}
+.logo_title{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.logo_title p{
+  margin:0px;
+  font-family: arial;
+  font-style: italic;
+  font-size:35px;
+  line-height:80px;
+  color:#3f51b5;
+  text-shadow: 2px 4px 5px rgba(0,0,0,0.5);
+}
+@media screen and (max-width: 768px) {
+  .logo_title p{
+    font-size:30px;
+  }
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(6deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

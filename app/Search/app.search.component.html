@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <div class="search" [ngClass]="{'search-box-shadow':Is_Add_shadow}">
+      <input class="search_input" type="text"
+      (focus)="Is_Add_shadow=true" (blur)="Is_Add_shadow=false" (keyup.enter)="Search()"
+      placeholder="搜尋城市…（例如：宜蘭、嘉義、臺南）"
+      [(ngModel)]="Search_Parameter"
+      >
+      <div class="search_icon">
+        <i class="fa fa-search fa-1x" aria-hidden="true" (click)="Search()"></i>
+      </div>
+  </div>
+</div>

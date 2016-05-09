@@ -1,0 +1,72 @@
+.Information{
+  width:100%;
+  height:80%;
+  padding-top:50px;
+}
+
+.Information_Right{
+  display: inline-block;
+  width:32%;
+  height:100%;
+  padding:5%;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+.Image_Block{
+  display:inline-block;
+  width:100%;
+  text-align: center;
+}
+.Image_Block img{
+  width:300px;
+  height:300px;
+}
+
+.Name_Block{
+  display:inline-block;
+  width:100%;
+  text-align: center;
+}
+.Name_Block h2{
+  text-shadow:3px 3px 3px #cccccc;
+}
+
+.Information_Center{
+  display: inline-block;
+  width:32%;
+  height:100%;
+  padding:5%;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.Information_Left{
+  display: inline-block;
+  width:32%;
+  height:100%;
+  padding:5%;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.Github:hover{
+  background-image: url(../images/github2.png);
+  background-size: 300px 300px;
+}
+/*回頂按鈕*/
+.scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    text-indent: -9999px;
+    background: url('images/small-up-arrows-in-a-circle1.png') no-repeat;
+    background-size:40px 40px;
+    /*background-color: #000;*/
+}
+.scrollup:hover{
+    background: url('images/small-up-arrows-in-a-circle.png') no-repeat;
+    background-size:40px 40px;
+}

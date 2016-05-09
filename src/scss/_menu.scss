@@ -1,0 +1,157 @@
+/*
+I.CSS書寫順序
+  1.位置屬性(position, top, right, z-index, display, float等)
+  2.大小(width, height, padding, margin)
+  3.文字系列(font, line-height, letter-spacing, color- text-align等)
+  4.背景(background, border等)
+  5.其他(animation, transition等)
+II.BEM （Block）（Element）（Modifier）：
+  .block{}
+  .block__element{}
+  .block--modifier{}
+*/
+
+//menu按鈕
+#menu1{
+  display:none;
+}
+@media screen and (max-width: 768px) {
+  #menu1{
+    float:right;
+    display:inline-block;
+    height:80px;
+    vertical-align:top;
+      .fa-bars{
+        padding-top:24px;
+        padding-right:24px;
+        color:#26a69a;
+        animation:rotate 1s linear;
+      }
+      .fa-times{
+        display: none;
+        padding-top:24px;
+        padding-right:24px;
+        color:#26a69a;
+      }
+  }
+  #menu1.active{
+    .fa-bars{
+      display: none;
+      padding-top:24px;
+      padding-right:24px;
+    }
+    .fa-times{
+      display:inherit;
+      padding-top:24px;
+      padding-right:24px;
+      color:#26a69a;
+      animation:rotate2 1s linear;
+    }
+  }
+}
+
+//menu項目
+#menu{
+  float: right;
+  display: inline-block;
+  vertical-align: top;
+  width:375px;
+  height: 80px;
+  margin-top:0px;
+  margin-right:70px;
+    ul{
+      margin:0;
+      padding-left:0px;
+      .menu_item{
+        text-decoration:none;
+          li{
+            float:left;
+            display:inline-block;
+            box-sizing: border-box;
+            width:125px;
+            height:80px;
+            box-sizing: border-box;
+            font-weight: normal;
+            line-height:80px;
+            color:#9e9e9e;
+            background-color: white;
+            font-size:15px;
+            text-align:center;
+          }
+      }
+    }
+}
+#menu{
+  a:hover{
+    li{
+      color:black;
+    }
+  }
+  a.active{
+    li{
+      color:#26a69a;
+      border-bottom: 5px solid #26a69a;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+    #menu{
+      width:100%;
+      height:0px;
+      background-color:white;
+      margin-right:0px;
+      margin-top:1px;
+    }
+    #menu{
+        ul{
+          padding-left:0px;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.8s;
+          .menu_item{
+            li{
+              width:100%;
+              border-bottom-width:0px;
+              text-align:center;
+            }
+          }
+        }
+    }
+    #menu{
+      a:hover{
+        li{
+          color:black;
+        }
+      }
+      a.active{
+        li{
+          color:white;
+          background-color:#26a69a;
+        }
+      }
+    }
+    #menu.active{
+      float:right;
+        ul{
+          max-height: 320px;
+        }
+    }
+  }
+
+  @keyframes rotate {
+  	from {
+  		transform: rotate(0deg);
+  	}
+  	to {
+  		transform: rotate(360deg);
+  	}
+  }
+  @keyframes rotate2 {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
