@@ -1,6 +1,5 @@
 
-import { Component,ViewEncapsulation,Input} from '@angular/core';
-import {NgClass} from '@angular/common';
+import { Component} from '@angular/core';
 interface is_show_m {
    status:boolean;
 }
@@ -8,7 +7,6 @@ interface is_show_m {
   selector: 'my-point-modal',
   styleUrls:["app/Point-Modal/app.point-modal.component.css"],
   templateUrl:"app/Point-Modal/app.point-modal.component.html",
-  directives: [NgClass],
   properties:["Modal_Content2","Is_Open2"],
 })
 export class PointModalComponent {

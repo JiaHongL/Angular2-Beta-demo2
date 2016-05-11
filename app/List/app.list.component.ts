@@ -1,6 +1,5 @@
 
-import { Component,ViewEncapsulation,Input, Output} from '@angular/core';
-import {NgClass} from '@angular/common';
+import {Component} from '@angular/core';
 import {BigModalComponent} from '../Big-Modal/app.big-modal.component';
 import {PointModalComponent} from '../Point-Modal/app.point-modal.component';
 
@@ -11,7 +10,7 @@ interface is_show_m {
   selector: 'my-list',
   styleUrls:["app/List/app.list.component.css"],
   templateUrl:"app/List/app.list.component.html",
-  directives: [NgClass,BigModalComponent,PointModalComponent],
+  directives: [BigModalComponent,PointModalComponent],
   properties:["pass_data"],
 })
 export class ListComponent {

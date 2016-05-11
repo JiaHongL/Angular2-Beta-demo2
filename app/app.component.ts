@@ -1,9 +1,9 @@
 /// <reference path="../typings/jquery/jquery.d.ts" />
 declare var $: JQueryStatic;
 
-import { Component, OnInit ,ElementRef,AfterViewInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Location} from '@angular/common';
-import {Router,ROUTER_DIRECTIVES, RouteConfig,OnActivate} from '@angular/router-deprecated';
+import {Router,ROUTER_DIRECTIVES, RouteConfig} from '@angular/router-deprecated';
 
 import {HomePageComponent} from './Home-Page/app.home-page.component';
 import {SourcePageComponent} from './Source-Page/app.source-page.component';
@@ -70,7 +70,7 @@ import {InformationPageComponent} from './Information-Page/app.information-page.
     </footer>
   </div>
   `,
-  // providers:  [HomePageComponent],
+  providers:  [HomePageComponent],
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
@@ -79,9 +79,9 @@ import {InformationPageComponent} from './Information-Page/app.information-page.
   {path: '/information',  component: InformationPageComponent,as:'Information'},
    {path:"/*path", redirectTo:['Home'] }
 ])
-export class AppComponent  implements AfterViewInit , OnInit{
+export class AppComponent{
   static chosenInitialized = false;
-  constructor(private router: Router,private el:ElementRef,private location: Location) {
+  constructor(private router: Router,private location: Location) {
     router.subscribe(path => {
       $('.menu_item').removeClass('active');
       var url = this.location.platformStrategy.path();
@@ -105,14 +105,6 @@ export class AppComponent  implements AfterViewInit , OnInit{
       $('#menu').addClass('active');
       $('#menu1').addClass('active');
     }
-  }
-  ngAfterViewInit() {
-      // if(!AppComponent.chosenInitialized) {
-      //    AppComponent.chosenInitialized = true;
-      // }
-  }
-  ngOnInit() {
-    // this.router.navigateByUrl('/home');
   }
 }
 

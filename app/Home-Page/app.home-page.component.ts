@@ -1,4 +1,5 @@
-import { Component, Output,AfterViewInit} from '@angular/core';
+import { Component,AfterViewInit} from '@angular/core';
+
 import {Service} from '../Service/Service';
 import {SearchComponent} from '../Search/app.search.component';
 import {ListComponent} from '../List/app.list.component';

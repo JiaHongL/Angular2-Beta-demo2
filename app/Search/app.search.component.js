@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/common'], function(exports_1, context_1) {
+System.register(['@angular/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,15 +10,12 @@ System.register(['@angular/core', '@angular/common'], function(exports_1, contex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, common_1;
+    var core_1;
     var SearchComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (common_1_1) {
-                common_1 = common_1_1;
             }],
         execute: function() {
             SearchComponent = (function () {
@@ -39,7 +36,6 @@ System.register(['@angular/core', '@angular/common'], function(exports_1, contex
                         selector: 'my-search',
                         styleUrls: ["app/Search/app.search.component.css"],
                         templateUrl: "app/Search/app.search.component.html",
-                        directives: [common_1.NgClass]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], SearchComponent);

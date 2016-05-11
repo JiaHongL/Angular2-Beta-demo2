@@ -1,6 +1,5 @@
 
-import { Component,ViewEncapsulation,Input} from '@angular/core';
-import {NgClass} from '@angular/common';
+import { Component} from '@angular/core';
 interface is_show_m {
    status:boolean;
 }
@@ -8,7 +7,6 @@ interface is_show_m {
   selector: 'my-big-modal',
   styleUrls:["app/Big-Modal/app.big-modal.component.css"],
   templateUrl:"app/Big-Modal/app.big-modal.component.html",
-  directives: [NgClass],
   properties:["Modal_Content","Is_Open"],
 })
 export class BigModalComponent {

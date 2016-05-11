@@ -1,12 +1,10 @@
 
-import { Component,ViewEncapsulation,ViewChild,Input, Output, EventEmitter} from '@angular/core';
-import {NgClass} from '@angular/common';
+import { Component, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'my-search',
   styleUrls:["app/Search/app.search.component.css"],
   templateUrl:"app/Search/app.search.component.html",
-  directives: [NgClass]
 })
 export class SearchComponent {
   Is_Add_shadow:boolean = false;

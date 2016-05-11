@@ -19,8 +19,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
             }],
         execute: function() {
             SourcePageComponent = (function () {
-                function SourcePageComponent(el) {
-                    this.el = el;
+                function SourcePageComponent() {
                     $("html, body").animate({ scrollTop: 0 }, 0);
                 }
                 SourcePageComponent.prototype.ngAfterViewInit = function () {
@@ -46,7 +45,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                         styleUrls: ["app/Source-Page/app.source-page.component.css"],
                         templateUrl: "app/Source-Page/app.source-page.component.html",
                     }), 
-                    __metadata('design:paramtypes', [core_1.ElementRef])
+                    __metadata('design:paramtypes', [])
                 ], SourcePageComponent);
                 return SourcePageComponent;
             }());

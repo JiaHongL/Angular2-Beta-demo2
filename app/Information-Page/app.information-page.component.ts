@@ -1,14 +1,12 @@
-import { Component,ElementRef,AfterViewInit} from '@angular/core';
-import {Router,ROUTER_DIRECTIVES} from '@angular/router-deprecated';
+import { Component,AfterViewInit} from '@angular/core';
 @Component({
   selector: 'my-information',
   styleUrls:["app/Information-Page/app.information-page.component.css"],
   templateUrl:"app/Information-Page/app.information-page.component.html",
-  directives: [ROUTER_DIRECTIVES]
 })
 export class InformationPageComponent implements AfterViewInit{
   static chosenInitialized = false;
-  constructor(private el:ElementRef) {
+  constructor() {
     $("html, body").animate({scrollTop: 0}, 0);
   }
   ngAfterViewInit() {

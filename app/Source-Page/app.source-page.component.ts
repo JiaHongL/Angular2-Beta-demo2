@@ -1,4 +1,4 @@
-import { Component,ElementRef,AfterViewInit} from '@angular/core';
+import { Component,AfterViewInit} from '@angular/core';
 @Component({
   selector: 'my-source',
   styleUrls:["app/Source-Page/app.source-page.component.css"],
@@ -6,7 +6,7 @@ import { Component,ElementRef,AfterViewInit} from '@angular/core';
 })
 export class SourcePageComponent implements AfterViewInit{
   static chosenInitialized = false;
-  constructor(private el:ElementRef) {
+  constructor() {
     $("html, body").animate({scrollTop: 0}, 0);
   }
   ngAfterViewInit() {
