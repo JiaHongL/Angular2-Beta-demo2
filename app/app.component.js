@@ -77,7 +77,7 @@ System.register(['@angular/core', '@angular/common', '@angular/router-deprecated
                         { path: '/home', component: app_home_page_component_1.HomePageComponent, as: 'Home' },
                         { path: '/source', component: app_source_page_component_1.SourcePageComponent, as: 'Source' },
                         { path: '/information', component: app_information_page_component_1.InformationPageComponent, as: 'Information' },
-                        { path: "/*path", redirectTo: ['Home'] }
+                        { path: "/**", redirectTo: ['Home'] }
                     ]), 
                     __metadata('design:paramtypes', [router_deprecated_1.Router, common_1.Location])
                 ], AppComponent);

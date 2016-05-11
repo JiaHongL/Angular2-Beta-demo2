@@ -1,7 +1,6 @@
 .SourcePage{
   width:100%;
   height:80%;
-  padding-top:50px;
 }
 .SourcePage_title{
   text-align: center;
@@ -10,6 +9,12 @@
   color:black;
   text-decoration:none;
 }
+.SourcePage_title h1{
+  margin:0;
+  padding-top:40px;
+  padding-bottom:40px;
+}
+
 @media screen and (max-width: 768px) {
   .SourcePage_title h1{
     font-size:20px;
@@ -18,11 +23,14 @@
 
 .SourcePage_img img{
   width:90%;
-  height:70%;
+  height:80%;
 }
-
+@media screen and (max-width: 768px) {
+  .SourcePage_title img{
+    height:60%;
+  }
+}
 .SourcePage_img{
-    padding:20px;
     text-align: center;
 }
 

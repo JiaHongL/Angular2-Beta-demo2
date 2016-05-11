@@ -77,7 +77,7 @@ import {InformationPageComponent} from './Information-Page/app.information-page.
   {path: '/home',  component: HomePageComponent,as:'Home'},
   {path: '/source',  component: SourcePageComponent,as:'Source'},
   {path: '/information',  component: InformationPageComponent,as:'Information'},
-   {path:"/*path", redirectTo:['Home'] }
+  {path:"/**", redirectTo:['Home'] }
 ])
 export class AppComponent{
   static chosenInitialized = false;

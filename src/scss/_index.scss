@@ -99,7 +99,9 @@ body{
   height:60px;
   padding:10px;
   transform:rotate(6deg);
-  animation:rotate 1s linear;
+  animation:rotate 0.8s linear;
+  -webkit-animation-delay: .8s; /* Chrome, Safari, Opera */
+  animation-delay: .8s;
 }
 @media screen and (max-width: 768px) {
   .logo_img{

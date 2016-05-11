@@ -28,7 +28,7 @@ II.BEM （Block）（Element）（Modifier）：
   background-color: white;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  animation:show 1s linear;
+  animation:show 0.5s linear;
 }
 @media screen and (max-width: 768px) {
   .list{

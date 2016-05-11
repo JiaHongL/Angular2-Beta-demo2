@@ -25,7 +25,7 @@ II.BEM （Block）（Element）（Modifier）：
         padding-top:24px;
         padding-right:24px;
         color:#26a69a;
-        animation:rotate 1s linear;
+        animation:rotate1 0.5s linear;
       }
       .fa-times{
         display: none;
@@ -45,7 +45,7 @@ II.BEM （Block）（Element）（Modifier）：
       padding-top:24px;
       padding-right:24px;
       color:#26a69a;
-      animation:rotate2 1s linear;
+      animation:rotate2 0.5s linear;
     }
   }
 }
@@ -108,7 +108,7 @@ II.BEM （Block）（Element）（Modifier）：
           padding-left:0px;
           max-height: 0;
           overflow: hidden;
-          transition: max-height 0.8s;
+          transition: max-height 0.5s;
           .menu_item{
             li{
               width:100%;
@@ -139,7 +139,7 @@ II.BEM （Block）（Element）（Modifier）：
     }
   }
 
-  @keyframes rotate {
+  @keyframes rotate1 {
   	from {
   		transform: rotate(0deg);
   	}
