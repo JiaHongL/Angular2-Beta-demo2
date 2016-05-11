@@ -1,16 +1,22 @@
 .Information{
   width:100%;
-  height:80%;
+  min-height: 80%;
   padding-top:50px;
 }
 
 .Information_Right{
   display: inline-block;
-  width:32%;
+  width:32.5%;
   height:100%;
   padding:5%;
   box-sizing: border-box;
   vertical-align: top;
+}
+@media screen and (max-width: 768px) {
+  .Information_Right{
+    display: inline;
+    padding:0%;
+  }
 }
 .Image_Block{
   display:inline-block;
@@ -33,21 +39,35 @@
 
 .Information_Center{
   display: inline-block;
-  width:32%;
+  width:32.5%;
+  height:100%;
+  padding:5%;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+@media screen and (max-width: 768px) {
+  .Information_Center{
+    display: inline;
+    padding:0%;
+  }
+}
+
+.Information_Left{
+  display: inline-block;
+  width:32.5%;
   height:100%;
   padding:5%;
   box-sizing: border-box;
   vertical-align: top;
 }
 
-.Information_Left{
-  display: inline-block;
-  width:32%;
-  height:100%;
-  padding:5%;
-  box-sizing: border-box;
-  vertical-align: top;
+@media screen and (max-width: 768px) {
+  .Information_Left{
+    display: inline;
+    padding:0%;
+  }
 }
+
 
 .Github:hover{
   background-image: url(../images/github2.png);

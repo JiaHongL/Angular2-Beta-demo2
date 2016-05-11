@@ -1,24 +1,17 @@
-import { Injectable ,EventEmitter} from '@angular/core';
-import {HTTP_PROVIDERS, Http,Headers,Response} from '@angular/http';
-import 'rxjs/Rx';
+import { Injectable} from '@angular/core';
+import {Http,Headers,Response} from '@angular/http';
+import {RequestOptions, Request, RequestMethod} from '@angular/http';
 import {Observable} from 'rxjs/Rx';
 
 @Injectable()
 export class Service {
-  constructor(private http: Http) {
+  constructor(private _http: Http) {
   }
   Get_Restaurant_Data() {
       return Observable.forkJoin(
-          this.http.get('http://data.coa.gov.tw/Service/OpenData/EzgoTravelFoodStay.aspx')
-          .map((res:Response) => res.json())
-      );
-  }
-  Search_Restaurant_Data(key){
-    var url= 'http://data.coa.gov.tw/Service/OpenData/EzgoTravelFoodStay.aspx?$filter=City+like+' + key + '+or+Town+like+' + key;
-    return Observable.forkJoin(
-      this.http.get(url)
+        this._http.get('./app/Service/data.json')
         .map((res:Response) => res.json())
-    );
+      );
   }
 }
 

@@ -1,10 +1,8 @@
 import { Component,ElementRef,AfterViewInit} from '@angular/core';
-import {Router,ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 @Component({
   selector: 'my-source',
   styleUrls:["app/Source-Page/app.source-page.component.css"],
   templateUrl:"app/Source-Page/app.source-page.component.html",
-  directives: [ROUTER_DIRECTIVES]
 })
 export class SourcePageComponent implements AfterViewInit{
   static chosenInitialized = false;

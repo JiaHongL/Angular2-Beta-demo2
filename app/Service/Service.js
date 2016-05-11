@@ -25,16 +25,11 @@ System.register(['@angular/core', '@angular/http', 'rxjs/Rx'], function(exports_
             }],
         execute: function() {
             Service = (function () {
-                function Service(http) {
-                    this.http = http;
+                function Service(_http) {
+                    this._http = _http;
                 }
                 Service.prototype.Get_Restaurant_Data = function () {
-                    return Rx_1.Observable.forkJoin(this.http.get('http://data.coa.gov.tw/Service/OpenData/EzgoTravelFoodStay.aspx')
-                        .map(function (res) { return res.json(); }));
-                };
-                Service.prototype.Search_Restaurant_Data = function (key) {
-                    var url = 'http://data.coa.gov.tw/Service/OpenData/EzgoTravelFoodStay.aspx?$filter=City+like+' + key + '+or+Town+like+' + key;
-                    return Rx_1.Observable.forkJoin(this.http.get(url)
+                    return Rx_1.Observable.forkJoin(this._http.get('./app/Service/data.json')
                         .map(function (res) { return res.json(); }));
                 };
                 Service = __decorate([

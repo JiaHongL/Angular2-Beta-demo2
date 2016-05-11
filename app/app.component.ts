@@ -3,7 +3,8 @@ declare var $: JQueryStatic;
 
 import { Component, OnInit ,ElementRef,AfterViewInit} from '@angular/core';
 import {Location} from '@angular/common';
-import {Router,ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouteConfig,OnActivate} from '@angular/router-deprecated';
+import {Router,ROUTER_DIRECTIVES, RouteConfig,OnActivate} from '@angular/router-deprecated';
+
 import {HomePageComponent} from './Home-Page/app.home-page.component';
 import {SourcePageComponent} from './Source-Page/app.source-page.component';
 import {InformationPageComponent} from './Information-Page/app.information-page.component';
@@ -69,7 +70,7 @@ import {InformationPageComponent} from './Information-Page/app.information-page.
     </footer>
   </div>
   `,
-  providers:  [HomePageComponent],
+  // providers:  [HomePageComponent],
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([

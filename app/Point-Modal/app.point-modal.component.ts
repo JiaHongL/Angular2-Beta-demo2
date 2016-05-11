@@ -1,5 +1,5 @@
 
-import { Component,ViewEncapsulation,Input, Output} from '@angular/core';
+import { Component,ViewEncapsulation,Input} from '@angular/core';
 import {NgClass} from '@angular/common';
 interface is_show_m {
    status:boolean;

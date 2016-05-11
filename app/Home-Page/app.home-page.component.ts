@@ -1,7 +1,4 @@
-import { Component, OnInit ,Input, Output, EventEmitter,ElementRef,AfterViewInit} from '@angular/core';
-import {Router,ROUTER_DIRECTIVES} from '@angular/router-deprecated';
-import {HTTP_PROVIDERS, Http,Headers,Response} from '@angular/http';
-import 'rxjs/Rx';
+import { Component, Output,AfterViewInit} from '@angular/core';
 import {Service} from '../Service/Service';
 import {SearchComponent} from '../Search/app.search.component';
 import {ListComponent} from '../List/app.list.component';
@@ -10,13 +7,13 @@ import {ListComponent} from '../List/app.list.component';
   selector: 'home-page',
   styleUrls:["app/Home-Page/app.home-page.component.css"],
   templateUrl:"app/Home-Page/app.home-page.component.html",
-  directives: [ROUTER_DIRECTIVES,SearchComponent,ListComponent],
-  providers:[HTTP_PROVIDERS,Service],
+  directives: [SearchComponent,ListComponent],
+  providers:[Service],
 })
 export class HomePageComponent implements AfterViewInit{
   static chosenInitialized = false;
   list_data:Array<any>;
-  constructor(private router: Router,private http: Http,private _Service:Service,private el:ElementRef) {
+  constructor(private _Service:Service) {
     $("html, body").animate({scrollTop: 0}, 0);
     this._Service.Get_Restaurant_Data()
     .subscribe(
@@ -25,8 +22,8 @@ export class HomePageComponent implements AfterViewInit{
       }
     );
   }
-  Search(key){
-    if(key==''){
+  Search(queryString){
+    if(queryString==''){
       this._Service.Get_Restaurant_Data()
       .subscribe(
         data => {
@@ -34,10 +31,18 @@ export class HomePageComponent implements AfterViewInit{
         }
       );
     }else{
-      this._Service.Search_Restaurant_Data(key)
+      this._Service.Get_Restaurant_Data()
       .subscribe(
         data => {
-          this.list_data = data[0];
+          var return_data = [];
+          for(var key in data[0]){
+              var t =JSON.stringify(data[0][key].Address);
+              var result = (t.match(queryString));
+              if(result!=null){
+                  return_data.push(data[0][key]);
+              }
+          }
+          this.list_data = return_data;
         }
       );
     }
