@@ -42,16 +42,10 @@ export class ListComponent {
   Open2(d){
     this.Open_modal2.status = true;
     this.Modal_Data2 = d;
-    console.log(this.Modal_Data2);
-    console.log(this.Modal_Data2.Coordinate);
     var l = this.Modal_Data2.Coordinate.length
-    console.log(this.Modal_Data2.Coordinate.length);
     var index = this.Modal_Data2.Coordinate.indexOf(',')
-    console.log(this.Modal_Data2.Coordinate.indexOf(','));
     var v1 = this.Modal_Data2.Coordinate.substr(0,index);
-    console.log(v1);
     var v2 = this.Modal_Data2.Coordinate.substr(index+1,l);
-    console.log(v2);
     this.Pass_lat = parseFloat(v1);
     this.Pass_lng = parseFloat(v2);
   }
