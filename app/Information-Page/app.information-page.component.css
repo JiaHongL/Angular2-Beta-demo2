@@ -73,7 +73,7 @@
   background-size: 300px 300px;
 }
 
-a .Github:hover{
+.Github:hover{
   background-image: url(../images/github2.png);
   background-size: 300px 300px;
 }
