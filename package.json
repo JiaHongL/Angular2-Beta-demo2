@@ -16,7 +16,8 @@
     "typings": "typings",
     "webdriver:update": "webdriver-manager update",
     "scss": "node-sass --output-style compressed -o dist/css src/scss",
-    "scss:w": "node-sass --output-style compressed -o dist/css src/scss -w"
+    "scss:w": "node-sass --output-style compressed -o dist/css src/scss -w",
+    "bundle":"gulp bundle"
   },
   "keywords": [],
   "author": "",

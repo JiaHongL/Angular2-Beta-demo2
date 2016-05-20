@@ -1,0 +1,19 @@
+<div id="openModal" class="modalDialog" [ngClass]="{'active':Is_Open2.status}">
+    <div>
+      <a title="Close" class="close" (click)="Is_Open2.status=false">X</a>
+      <sebm-google-map
+        [latitude]="Get_lat"
+        [longitude]="Get_lng"
+        [zoom]="zoom"
+        [disableDefaultUI]="true"
+        [zoomControl]="true"
+        >
+        <sebm-google-map-marker [latitude]="Get_lat" [longitude]="Get_lng" [iconUrl]="'./images/store2.png'">
+          <sebm-google-map-info-window  [disableAutoPan]="true" let window>
+            <h2 style="text-align:center;">{{Modal_Content2.Name}}</h2>
+            <strong>{{Modal_Content2.TrafficGuidelines}}</strong>
+          </sebm-google-map-info-window>
+        </sebm-google-map-marker>
+      </sebm-google-map>
+    </div>
+</div>

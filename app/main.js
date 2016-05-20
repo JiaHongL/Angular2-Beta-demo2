@@ -1,7 +1,7 @@
-System.register(['@angular/platform-browser-dynamic', '@angular/router-deprecated', '@angular/core', '@angular/common', '@angular/http', '@angular/core/index', './app.component'], function(exports_1, context_1) {
+System.register(['@angular/platform-browser-dynamic', '@angular/router-deprecated', '@angular/core', '@angular/common', '@angular/http', '@angular/core/index', './app.component', 'angular2-google-maps/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var platform_browser_dynamic_1, router_deprecated_1, core_1, common_1, http_1, index_1, app_component_1;
+    var platform_browser_dynamic_1, router_deprecated_1, core_1, common_1, http_1, index_1, app_component_1, core_2;
     return {
         setters:[
             function (platform_browser_dynamic_1_1) {
@@ -24,11 +24,24 @@ System.register(['@angular/platform-browser-dynamic', '@angular/router-deprecate
             },
             function (app_component_1_1) {
                 app_component_1 = app_component_1_1;
+            },
+            function (core_2_1) {
+                core_2 = core_2_1;
             }],
         execute: function() {
             index_1.enableProdMode();
             platform_browser_dynamic_1.bootstrap(app_component_1.AppComponent, [router_deprecated_1.ROUTER_PROVIDERS,
-                core_1.provide(common_1.LocationStrategy, { useClass: common_1.HashLocationStrategy }), http_1.HTTP_PROVIDERS]);
+                core_1.provide(common_1.LocationStrategy, { useClass: common_1.HashLocationStrategy }),
+                http_1.HTTP_PROVIDERS,
+                core_2.ANGULAR2_GOOGLE_MAPS_PROVIDERS,
+                core_1.provide(core_2.LazyMapsAPILoaderConfig, {
+                    useFactory: function () {
+                        var config = new core_2.LazyMapsAPILoaderConfig();
+                        config.apiKey = 'AIzaSyDYo_ftTTzHr7RkX6jUNvXnFYcwk8leI4M';
+                        return config;
+                    }
+                })
+            ]);
         }
     }
 });

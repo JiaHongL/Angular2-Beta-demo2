@@ -32,9 +32,10 @@
   display:inline-block;
   width:100%;
   text-align: center;
+  color:#673ab7;
 }
 .Name_Block h2{
-  text-shadow:3px 3px 3px #cccccc;
+  text-shadow:4px 4px 1px #cccccc;
 }
 
 .Information_Center{
@@ -68,11 +69,21 @@
   }
 }
 
+.Blog2:hover{
+  background-size: 300px 300px;
+}
 
 .Github:hover{
   background-image: url(../images/github2.png);
   background-size: 300px 300px;
 }
+
+.Me:hover{
+  background-size: 300px 300px;
+}
+
+
+
 /*回頂按鈕*/
 .scrollup {
     width: 40px;
@@ -90,3 +101,5 @@
     background: url('images/small-up-arrows-in-a-circle.png') no-repeat;
     background-size:40px 40px;
 }
+
+a{ text-decoration: none;}
