@@ -73,7 +73,7 @@
   background-size: 300px 300px;
 }
 
-.Github:hover{
+a .Github:hover{
   background-image: url(../images/github2.png);
   background-size: 300px 300px;
 }
@@ -102,4 +102,7 @@
     background-size:40px 40px;
 }
 
-a{ text-decoration: none;}
+a{
+  color:#673ab7;
+  text-decoration: none;
+}
