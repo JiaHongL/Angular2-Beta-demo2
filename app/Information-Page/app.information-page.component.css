@@ -68,13 +68,17 @@
     padding:0%;
   }
 }
+a{
+  color:#673ab7;
+  text-decoration: none;
+}
 
 .Blog2:hover{
   background-size: 300px 300px;
 }
 
 .Github:hover{
-  background-image: url(../images/github2.png);
+  background-image: url(../../images/github2.png);
   background-size: 300px 300px;
 }
 
@@ -100,9 +104,4 @@
 .scrollup:hover{
     background: url('images/small-up-arrows-in-a-circle.png') no-repeat;
     background-size:40px 40px;
-}
-
-a{
-  color:#673ab7;
-  text-decoration: none;
 }
