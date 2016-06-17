@@ -28,13 +28,12 @@ System.register(['@angular/core', 'angular2-google-maps/core'], function(exports
                     this.markers = [];
                     this.Modal_Content2 = [];
                     this.Is_Open2 = { status: false };
-                    this.test = '123';
                 }
                 MapModalComponent = __decorate([
                     core_1.Injectable(),
                     core_1.Component({
                         selector: 'my-map-modal',
-                        directives: [core_2.ANGULAR2_GOOGLE_MAPS_DIRECTIVES],
+                        directives: [core_2.GOOGLE_MAPS_DIRECTIVES],
                         styleUrls: ["app/Map-Modal/app.map-modal.component.css"],
                         templateUrl: "app/Map-Modal/app.map-modal.component.html",
                         properties: ["Modal_Content2", "Is_Open2", "Get_lat", "Get_lng"],

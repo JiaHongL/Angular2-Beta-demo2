@@ -33,7 +33,7 @@ System.register(['@angular/platform-browser-dynamic', '@angular/router-deprecate
             platform_browser_dynamic_1.bootstrap(app_component_1.AppComponent, [router_deprecated_1.ROUTER_PROVIDERS,
                 core_1.provide(common_1.LocationStrategy, { useClass: common_1.HashLocationStrategy }),
                 http_1.HTTP_PROVIDERS,
-                core_2.ANGULAR2_GOOGLE_MAPS_PROVIDERS,
+                core_2.GOOGLE_MAPS_PROVIDERS,
                 core_1.provide(core_2.LazyMapsAPILoaderConfig, {
                     useFactory: function () {
                         var config = new core_2.LazyMapsAPILoaderConfig();

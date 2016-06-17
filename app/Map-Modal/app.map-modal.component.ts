@@ -1,12 +1,11 @@
-
 import { Component,Injectable} from '@angular/core';
 
 import {
   MapsAPILoader,
   NoOpMapsAPILoader,
   MouseEvent,
-  ANGULAR2_GOOGLE_MAPS_PROVIDERS,
-  ANGULAR2_GOOGLE_MAPS_DIRECTIVES
+  GOOGLE_MAPS_PROVIDERS,
+  GOOGLE_MAPS_DIRECTIVES
 } from 'angular2-google-maps/core';
 
 
@@ -23,7 +22,7 @@ interface marker {
 @Injectable()
 @Component({
   selector: 'my-map-modal',
-  directives: [ANGULAR2_GOOGLE_MAPS_DIRECTIVES],
+  directives: [GOOGLE_MAPS_DIRECTIVES],
   styleUrls:["app/Map-Modal/app.map-modal.component.css"],
   templateUrl:"app/Map-Modal/app.map-modal.component.html",
   properties:["Modal_Content2","Is_Open2","Get_lat","Get_lng"],
@@ -38,8 +37,6 @@ export class MapModalComponent {
   constructor() {
     this.Modal_Content2 = [];
     this.Is_Open2 = {status:false};
-    this.test = '123';
-
   }
   // google maps zoom level
   zoom: number = 18;

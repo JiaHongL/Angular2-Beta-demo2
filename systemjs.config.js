@@ -6,7 +6,7 @@
     'rxjs':                       'node_modules/rxjs',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     '@angular':                   'node_modules/@angular',
-    'angular2-google-maps':   'node_modules/angular2-google-maps',
+    'angular2-google-maps': 'node_modules/angular2-google-maps'
   };
 
   // packages tells the System loader how to load when no filename and/or no extension
@@ -14,7 +14,7 @@
     'app':                        { main: 'main.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { defaultExtension: 'js' },
-    'angular2-google-maps':       { defaultExtension: 'js' },
+    'angular2-google-maps/core':  { main: 'index.js', defaultExtension: 'js' }
   };
 
   var packageNames = [

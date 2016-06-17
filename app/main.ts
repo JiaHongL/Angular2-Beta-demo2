@@ -6,14 +6,14 @@ import { HTTP_PROVIDERS } from '@angular/http';
 import {enableProdMode} from '@angular/core/index';
 import {AppComponent}     from './app.component';
 
-import {ANGULAR2_GOOGLE_MAPS_PROVIDERS,LazyMapsAPILoaderConfig} from 'angular2-google-maps/core';
+import {GOOGLE_MAPS_PROVIDERS,LazyMapsAPILoaderConfig} from 'angular2-google-maps/core';
 
 enableProdMode();
 bootstrap(AppComponent,
 [         ROUTER_PROVIDERS,
           provide(LocationStrategy, {useClass: HashLocationStrategy}),
           HTTP_PROVIDERS,
-          ANGULAR2_GOOGLE_MAPS_PROVIDERS,
+          GOOGLE_MAPS_PROVIDERS,
           provide(LazyMapsAPILoaderConfig,
           {
             useFactory: () => {

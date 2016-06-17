@@ -9,7 +9,7 @@
         [zoomControl]="true"
         >
         <sebm-google-map-marker [latitude]="Get_lat" [longitude]="Get_lng" [iconUrl]="'./images/store2.png'">
-          <sebm-google-map-info-window  [disableAutoPan]="true" let window>
+          <sebm-google-map-info-window   [disableAutoPan]="true" [isOpen]="true" let window>
             <h2 style="text-align:center;">{{Modal_Content2.Name}}</h2>
             <strong>{{Modal_Content2.TrafficGuidelines}}</strong>
           </sebm-google-map-info-window>
