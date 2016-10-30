@@ -37,7 +37,7 @@ System.register(['@angular/platform-browser-dynamic', '@angular/router-deprecate
                 core_1.provide(core_2.LazyMapsAPILoaderConfig, {
                     useFactory: function () {
                         var config = new core_2.LazyMapsAPILoaderConfig();
-                        config.apiKey = 'AIzaSyDYo_ftTTzHr7RkX6jUNvXnFYcwk8leI4M';
+                        config.apiKey = 'AIzaSyCM_qo-63rwArz7eF9VtXMpoEoqdXzZgqc';
                         return config;
                     }
                 })

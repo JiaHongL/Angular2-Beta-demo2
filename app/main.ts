@@ -18,7 +18,7 @@ bootstrap(AppComponent,
           {
             useFactory: () => {
               let config = new LazyMapsAPILoaderConfig();
-              config.apiKey = 'AIzaSyDYo_ftTTzHr7RkX6jUNvXnFYcwk8leI4M';
+              config.apiKey = 'AIzaSyCM_qo-63rwArz7eF9VtXMpoEoqdXzZgqc';
               return config;
             }
           })
